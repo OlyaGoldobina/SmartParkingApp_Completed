@@ -1,0 +1,52 @@
+﻿<Window x:Class="ClientApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientApp"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="800" Background="LightBlue">
+    <Grid x:Name="OpenWindow" Background="LightBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="133*"/>
+            <ColumnDefinition Width="133*"/>
+            <ColumnDefinition Width="267*"/>
+            <ColumnDefinition Width="133*"/>
+            <ColumnDefinition Width="133*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,22" Grid.ColumnSpan="3">
+            <Run FontSize="46" Foreground="White" FontFamily="Narkisim">Smart Parking App</Run>
+        </TextBlock>
+        <TextBlock Name="ErrorBlock" Grid.Row="1" Grid.ColumnSpan="5" HorizontalAlignment="Left" Margin="5,0,5,0" FontFamily="Narkisim" FontSize="25" Foreground="LightCoral">
+        </TextBlock>
+        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White" FontSize="25" HorizontalAlignment="Left" FontFamily="Narkisim" Margin="0,43,0,43" Grid.RowSpan="3">
+            Login(Phone)
+        </Label>
+        <TextBox Grid.Column ="2" MinHeight="30" Grid.Row="2" Grid.ColumnSpan="2" Foreground="DarkSlateGray" FontFamily="Narkisim"
+                     Margin="3,3,3,3" Padding="3" Name="EnterLogin"/>
+        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White" FontSize="25" HorizontalAlignment="Left" FontFamily="Narkisim">
+            Password
+        </Label>
+        <PasswordBox Name="EnterPassword" Grid.Column ="2" MinHeight="30" Grid.Row="3" Grid.ColumnSpan="2"
+                     Margin="3,3,3,3" Padding="3"/>
+        <Button Name="EnterTheApp" Grid.Column="3" Grid.Row="5" Background="LightCoral" Click="EnterTheApp_Click">
+            <Run FontSize="25" Foreground="White" FontFamily="Narkisim">Enter</Run>
+        </Button>
+        <Button Name="ForgetPas" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Background="LightBlue" BorderThickness="0" Click="ForgetPas_Click">
+            <Run FontSize="25" Foreground="White" FontFamily="Narkisim" TextDecorations="Underline">Forget password?</Run>
+        </Button>
+        <Button Name="Registration" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Background="LightBlue" BorderThickness="0" Click="Registration_Click">
+            <Run FontSize="25" Foreground="White" FontFamily="Narkisim" TextDecorations="Underline">Create account</Run>
+        </Button>
+    </Grid>
+</Window>

@@ -1,0 +1,61 @@
+﻿{
+  "PastSessions": [
+    {
+      "EntryDt": "2019-10-29T11:45:26.5889633+03:00",
+      "PaymentDt": "2019-10-30T11:45:26.5889633+03:00",
+      "ExitDt": "2019-10-30T11:45:26.5889633+03:00",
+      "TotalPayment": 200,
+      "CarPlateNumber": "A123Df",
+      "TicketNumber": 1,
+      "UserId": 2
+    },
+    {
+      "EntryDt": "2019-09-29T11:45:26.5889633+03:00",
+      "PaymentDt": "2019-09-29T12:45:26.5889633+03:00",
+      "ExitDt": "2019-09-29T12:45:26.5889633+03:00",
+      "TotalPayment": 50,
+      "CarPlateNumber": "A123Df",
+      "TicketNumber": 1,
+      "UserId": 2
+    }
+  ],
+  "ActiveSessions": [
+    {
+      "EntryDt": "2019-11-29T11:45:26.5889633+03:00",
+      "PaymentDt": null,
+      "ExitDt": null,
+      "TotalPayment": null,
+      "CarPlateNumber": "A123Df",
+      "TicketNumber": 1,
+      "UserId": 2
+    },
+    {
+      "EntryDt": "2019-11-29T16:55:45.5213482+03:00",
+      "PaymentDt": null,
+      "ExitDt": null,
+      "TotalPayment": null,
+      "CarPlateNumber": "A451BX750",
+      "TicketNumber": 2,
+      "UserId": 1
+    },
+    {
+      "EntryDt": "2019-11-29T17:33:05.1683823+03:00",
+      "PaymentDt": null,
+      "ExitDt": null,
+      "TotalPayment": null,
+      "CarPlateNumber": "A145FR",
+      "TicketNumber": 3,
+      "UserId": 3
+    },
+    {
+      "EntryDt": "2019-11-29T17:43:38.7217563+03:00",
+      "PaymentDt": null,
+      "ExitDt": null,
+      "TotalPayment": null,
+      "CarPlateNumber": "A133DF",
+      "TicketNumber": 4,
+      "UserId": 4
+    }
+  ],
+  "Capacity": 100
+}

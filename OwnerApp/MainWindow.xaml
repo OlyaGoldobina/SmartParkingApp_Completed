@@ -1,0 +1,103 @@
+﻿<Window x:Class="OwnerApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OwnerApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="LightBlue">
+    <Grid x:Name="OpenWindow" Background="LightBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.14*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.07*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Grid.ColumnSpan="4">
+            <Run FontSize="46" Foreground="White" FontFamily="Narkisim">Smart Parking App</Run>
+        </TextBlock>
+        <Border Background="GhostWhite" BorderBrush="DarkSlateGray" BorderThickness="1" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="5">
+        </Border>
+        <Border Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" BorderBrush="DarkSlateGray" BorderThickness="1">
+            <TextBlock HorizontalAlignment="Left" FontSize="15" Foreground="DarkSlateGray" FontFamily="Narkisim" Margin="5" 
+                    Name="Percent">
+             </TextBlock>
+        </Border>
+        <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4"
+                   HorizontalAlignment="Left" FontSize="15" Foreground="DarkSlateGray" FontFamily="Narkisim" Margin="5">
+            Active sessions:
+        </TextBlock>
+        <Border Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4" BorderThickness="1" BorderBrush="DarkSlateGray">
+            <ScrollViewer>
+            <ListBox Name="CurrentSessionText" Background="GhostWhite" HorizontalAlignment="Left" 
+                         FontSize="15" Foreground="DarkSlateGray" FontFamily="Narkisim" BorderThickness="0">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Margin="5,0,5,0">Entry Date is</TextBlock>
+                            <TextBlock Text="{Binding EntryDt}" Margin="5,0,5,0"/>
+                            <TextBlock Margin="5,0,5,0">Car Plate Number is</TextBlock>
+                            <TextBlock Text="{Binding CarPlateNumber}" Margin="5,0,5,0"/>
+                            <TextBlock Margin="5,0,5,0">User's ID is</TextBlock>
+                            <TextBlock Text="{Binding UserId}" Margin="5,0,5,0"/>
+                            <Line X1="5" X2="100" Stroke="DarkSlateBlue" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
+        </Border>
+        <TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="4"
+                   HorizontalAlignment="Left" FontSize="15" Foreground="DarkSlateGray" FontFamily="Narkisim" Margin="5">
+            Past sessions:
+        </TextBlock>
+        <Border Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="4" BorderThickness="1" BorderBrush="DarkSlateGray">
+            <ScrollViewer>
+                <ListBox Name="LastSessionText" Background="GhostWhite" HorizontalAlignment="Left"
+                         FontSize="15" Foreground="DarkSlateGray" FontFamily="Narkisim" BorderThickness="0">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Margin="5,0,5,0">Entry Date is</TextBlock>
+                                <TextBlock Text="{Binding EntryDt}" Margin="5,0,5,0"/>
+                                <TextBlock Margin="5,0,5,0">Exit Date is</TextBlock>
+                                <TextBlock Text="{Binding ExitDt}" Margin="5,0,5,0"/>
+                                <TextBlock Margin="5,0,5,0">Last Payment Date is</TextBlock>
+                                <TextBlock Text="{Binding PaymentDt}" Margin="5,0,5,0"/>
+                                <TextBlock Margin="5,0,5,0">Total Payment is</TextBlock>
+                                <TextBlock Text="{Binding TotalPayment}" Margin="5,0,5,0"/>
+                                <TextBlock Margin="5,0,5,0">Car Plate Number is</TextBlock>
+                                <TextBlock Text="{Binding CarPlateNumber}" Margin="5,0,5,0"/>
+                                <TextBlock Margin="5,0,5,0">User's ID is</TextBlock>
+                                <TextBlock Text="{Binding UserId}" Margin="5,0,5,0"/>
+                                <Line X1="5" X2="100" Stroke="DarkSlateBlue" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </ScrollViewer>
+        </Border>
+        <Button Name="Current" Grid.Column="1" Grid.Row="6" Background="GhostWhite" BorderThickness="1" BorderBrush="GhostWhite">
+            <Run FontSize="15" Foreground="DarkSlateGray" FontFamily="Narkisim">
+                Current details
+            </Run>
+        </Button>
+        <Button Name="Profit" Grid.Column="2" Grid.Row="6" Background="LightCoral" BorderThickness="1" BorderBrush="DarkSlateGray" Click="Profit_Click">
+            <Run FontSize="15" Foreground="DarkSlateGray" FontFamily="Narkisim">
+                Total profit
+            </Run>
+        </Button>
+    </Grid>
+</Window>
+    
